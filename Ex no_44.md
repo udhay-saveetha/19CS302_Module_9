@@ -1,41 +1,60 @@
 
-# EX 45 C program that implements a queue using an array, and performs insertion (enqueue) and display operations.
+
+# EX 44 C functions to perform enqueue, dequeue, display, peek in Queue using Array.
 ## AIM:
-To write a C program that implements a queue using an array, and performs insertion (enqueue) and display operations. 
+To write a C Write a functions to perform enqueue, dequeue, display, peek in Queue using Array.
 
 ## Algorithm
 1. Start. 
 2. Define a variables. 
-3. Write a functions to traverse the linked list and display it in the following format. 
+3. Write a functions to perform enqueue,dequeue ,display,peek in Queue using array. 
 4. Read the value using scanf. 
 5. Ask the user to make an input. 
 6. Print out the answer. 
-7. End
+7. End   
 
 ## Program:
 ```
-struct Node{ 
-char data; 
-struct Node *next; 
-}*head; 
- 
- 
-void display() 
+char queue[50]; 
+int size=10,front,rear,i; 
+void enqueue(char data) 
 { 
-struct Node *temp; 
-temp=head; 
-while(temp!=NULL) 
+if(rear<size) 
 { 
-printf("%c\n",temp->data); 
-temp=temp->next; 
+if(front==-1) 
+{ 
+front=0; 
+} 
+rear=rear+1; 
+queue[rear]=data; 
+} 
+{ 
+printf("%c\n",queue[i]); 
+} 
+} 
+void dequeue() 
+{  
+if(front==-1||front>rear) 
+{ 
+printf("Queue Underflow\n"); 
+} 
+else 
+{ 
+front=front+1; 
 } 
  
 } 
+void peek() 
+{ 
+printf("%c\n",queue[front]); 
+ 
+} 
+ 
+}
 ```
 
 ## Output:
-![image](https://github.com/user-attachments/assets/b402ce73-b0c8-4b2c-9fe0-ddd383f0a3bb)
-
+![image](https://github.com/user-attachments/assets/3c69a98a-cbb9-4608-b259-f8cb31a3a653)
 
 
 ## Result:
